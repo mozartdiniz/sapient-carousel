@@ -16,7 +16,8 @@ import NavigationButton from './components/NavigationButton/NavigationButton';
 
 class Carousel extends React.Component {
     state = {
-        images: []
+        images: [],
+        selectedImageIndex: 0
     };
 
     async getData() {
@@ -30,15 +31,35 @@ class Carousel extends React.Component {
         });
     }
 
+    goForward = () => {
+        if (this.state.selectedImageIndex >= this.state.images.length) {
+            return;
+        }
+
+        this.setState({
+            selectedImageIndex: this.state.selectedImageIndex + 1
+        });
+    };
+
+    goBackward = () => {
+        if (!this.state.selectedImageIndex) {
+            return;
+        }
+
+        this.setState({
+            selectedImageIndex: this.state.selectedImageIndex - 1
+        });
+    };
+
     render() {
         return (
             <div>
                 <div className={styles.carouselImagesContainer}>
-                    <ImageGallery images={this.state.images} imageWidth={this.props.imageWidth} />
+                    <ImageGallery images={this.state.images} imageWidth={this.props.imageWidth} selectedImageIndex={this.state.selectedImageIndex} />
                 </div>
                 <div className={styles.carouselButtonsContainer}>
-                    <NavigationButton label="Prev" direction="backward" />
-                    <NavigationButton label="Next" direction="forward" />
+                    <NavigationButton label="Prev" direction="backward" onClickHandler={this.goBackward} />
+                    <NavigationButton label="Next" direction="forward" onClickHandler={this.goForward} />
                 </div>
             </div>
         );
