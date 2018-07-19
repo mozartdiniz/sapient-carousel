@@ -1,6 +1,9 @@
 import * as React from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
+
 import * as styles from './Carousel.css';
+
 // Config
 import URLs from './conf/URLs';
 
@@ -8,7 +11,7 @@ import URLs from './conf/URLs';
 import { imagesFromFlickrAPI } from './Carousel.helpers';
 
 // Components
-import { ImageGallery } from './components/ImageGallery/ImageGallery';
+import ImageGallery from './components/ImageGallery/ImageGallery';
 
 class Carousel extends React.Component {
     state = {
@@ -34,5 +37,13 @@ class Carousel extends React.Component {
         );
     }
 }
+
+Carousel.PropTypes = {
+    imageWidth: PropTypes.number
+};
+
+Carousel.defaultProps = {
+    imageWidth: 300
+};
 
 export default Carousel;
