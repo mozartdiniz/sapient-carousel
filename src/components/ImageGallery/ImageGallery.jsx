@@ -9,17 +9,19 @@ import Image from '../Image/Image';
 import { calculateContainerWidth } from './ImageGallery.helpers';
 
 const ImageGallery = props => (
-    <div style={calculateContainerWidth(props.images.length)} className={styles.imageGallery}>
-        {props.images.map(image => <Image key={image.id} url={image.url} title={image.title} />)}
+    <div style={calculateContainerWidth(props.images.length, props.imageWidth)} className={styles.imageGallery}>
+        {props.images.map(image => <Image key={image.id} url={image.url} title={image.title} imageWidth={props.imageWidth} />)}
     </div>
 );
 
 ImageGallery.propTypes = {
-    images: PropTypes.array
+    images: PropTypes.array,
+    imageWidth: PropTypes.number
 };
 
 ImageGallery.defaultProps = {
-    images: []
+    images: [],
+    imageWidth: 0
 };
 
 export default ImageGallery;

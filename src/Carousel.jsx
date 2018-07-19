@@ -32,7 +32,7 @@ class Carousel extends React.Component {
     render() {
         return (
             <div className={styles.carousel}>
-                <ImageGallery images={this.state.images} />
+                <ImageGallery images={this.state.images} imageWidth={this.props.imageWidth} />
             </div>
         );
     }

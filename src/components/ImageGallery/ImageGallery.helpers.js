@@ -1,3 +1,3 @@
-export const calculateContainerWidth = (imagesLength) => ({
-    width: imagesLength * 300
+export const calculateContainerWidth = (imagesLength, imageWidth) => ({
+    width: imagesLength * imageWidth
 });
