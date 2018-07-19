@@ -14,7 +14,7 @@ const ImageGallery = props => (
     </div>
 );
 
-ImageGallery.PropTypes = {
+ImageGallery.propTypes = {
     images: PropTypes.array
 };
 

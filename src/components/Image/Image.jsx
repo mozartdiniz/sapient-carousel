@@ -8,7 +8,7 @@ const Image = props => (
     </div>
 );
 
-Image.PropTypes = {
+Image.propTypes = {
     url: PropTypes.string,
     title: PropTypes.string
 };

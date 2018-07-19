@@ -38,7 +38,7 @@ class Carousel extends React.Component {
     }
 }
 
-Carousel.PropTypes = {
+Carousel.propTypes = {
     imageWidth: PropTypes.number
 };
 
