@@ -10,7 +10,7 @@ class Page extends React.Component {
         return (
             <div>
                 <div className={styles.pageHeaders}>Carousel Test</div>
-                <Carousel width={400} />
+                <Carousel imageWidth={300} />
             </div>
         );
     }
