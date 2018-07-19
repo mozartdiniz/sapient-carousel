@@ -1,6 +1,7 @@
 import * as React from 'react';
-import * as styles from './ImageGallery.css';
 import PropTypes from 'prop-types';
+
+import * as styles from './ImageGallery.css';
 
 // Components
 import Image from '../Image/Image';

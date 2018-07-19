@@ -1,6 +1,7 @@
 import * as React from 'react';
-import * as styles from './Image.css';
 import PropTypes from 'prop-types';
+
+import * as styles from './Image.css';
 
 // Helpers
 import { calculateImageStyles } from './Image.helpers';

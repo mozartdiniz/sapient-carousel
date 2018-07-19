@@ -1,5 +1,9 @@
-.carousel {
+.carouselImagesContainer {
     overflow: hidden;
     width: 100%;
     height: 400px;
+}
+
+.carouselButtonsContainer {
+    text-align: center;
 }

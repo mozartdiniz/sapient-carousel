@@ -12,6 +12,7 @@ import { imagesFromFlickrAPI } from './Carousel.helpers';
 
 // Components
 import ImageGallery from './components/ImageGallery/ImageGallery';
+import NavigationButton from './components/NavigationButton/NavigationButton';
 
 class Carousel extends React.Component {
     state = {
@@ -31,8 +32,14 @@ class Carousel extends React.Component {
 
     render() {
         return (
-            <div className={styles.carousel}>
-                <ImageGallery images={this.state.images} imageWidth={this.props.imageWidth} />
+            <div>
+                <div className={styles.carouselImagesContainer}>
+                    <ImageGallery images={this.state.images} imageWidth={this.props.imageWidth} />
+                </div>
+                <div className={styles.carouselButtonsContainer}>
+                    <NavigationButton label="Prev" direction="backward" />
+                    <NavigationButton label="Next" direction="forward" />
+                </div>
             </div>
         );
     }
