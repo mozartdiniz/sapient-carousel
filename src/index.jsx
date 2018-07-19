@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 
 // Components
-import Carousel from './components/Carousel/Carousel';
+import Page from './Page.jsx';
 
-ReactDOM.render(<Carousel width={400} />, document.getElementById('root'));
+ReactDOM.render(<Page />, document.getElementById('root'));
 registerServiceWorker();
