@@ -1,0 +1,10 @@
+.imageContainer {
+    width: 300px;
+    height: inherit;
+    overflow: hidden;
+    float: left;
+}
+
+.image {
+    height: inherit;
+}
