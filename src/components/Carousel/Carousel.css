@@ -1,7 +1,8 @@
+@import "../../styles.css";
 .carouselImagesContainer {
     overflow: hidden;
-    width: 100%;
-    height: 400px;
+    width: var(--carousel-width);
+    height: var(--carousel-height);
 }
 
 .carouselButtonsContainer {

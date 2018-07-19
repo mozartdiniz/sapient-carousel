@@ -5,14 +5,14 @@ import PropTypes from 'prop-types';
 import * as styles from './Carousel.css';
 
 // Config
-import URLs from './conf/URLs';
+import URLs from '../../conf/URLs';
 
 // Helpers
 import { imagesFromFlickrAPI } from './Carousel.helpers';
 
 // Components
-import ImageGallery from './components/ImageGallery/ImageGallery';
-import NavigationButton from './components/NavigationButton/NavigationButton';
+import ImageGallery from '../ImageGallery/ImageGallery';
+import NavigationButton from '../NavigationButton/NavigationButton';
 
 class Carousel extends React.Component {
     state = {

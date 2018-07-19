@@ -100,6 +100,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^2.9.0"
+    "eslint-config-prettier": "^2.9.0",
+    "postcss-variables-loader": "^5.0.1"
   }
 }
